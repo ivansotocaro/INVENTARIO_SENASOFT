@@ -1,0 +1,27 @@
+.container__login{
+    margin-top: 60px;
+    border-radius: 50px;
+}
+
+.imagen{
+   background-image: url(login/bg-01.jpg);
+   -webkit-filter: contrast(100%);
+   filter: contrast(100%);
+}
+
+.form__card{
+    margin-top: 5rem;
+}
+
+.form-group {
+    margin-bottom: 2rem !important;
+}
+
+.text__login{
+    text-align: center;
+    color: white;
+    padding: 35px 0px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 50px;
+    letter-spacing: 2px;
+}
