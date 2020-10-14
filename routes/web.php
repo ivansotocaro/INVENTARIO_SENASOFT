@@ -22,6 +22,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+
 //Route authentication
 Route::middleware(['auth'])->group(function (){
 
