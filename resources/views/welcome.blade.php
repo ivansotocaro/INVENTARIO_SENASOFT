@@ -76,8 +76,21 @@
                                             <ul id="navigation">                                                                                          
                                                 <li class="active"><a href="{{ url('/') }}">Inicio</a></li>                                              
                                                 <li><a href="services.html">Servicios</a></li>
-                                                <li><a href="{{ route('login') }}">Ingresar</a></li>                                              
-                                                <li><a href="{{ route('register') }}">Registrarse</a></li>
+                                                
+                                                  @if (Route::has('login'))
+                                                     
+                                                          @auth
+                                                          <li><a href="{{ url('/home') }}">Home</a></li>                                                              
+                                                          @else
+                                                          <li><a href="{{ route('login') }}">Ingrsar</a></li>                                                         
+
+                                                              @if (Route::has('register'))
+                                                              <li><a href="{{ route('register') }}">Registrarse</a></li>
+                                                                  
+                                                              @endif
+                                                          @endauth
+                                                      
+                                                  @endif
                                               
                                             </ul>
                                         </nav>
