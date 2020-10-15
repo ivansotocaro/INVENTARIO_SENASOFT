@@ -15,6 +15,11 @@ class CreateBodegasTable extends Migration
     {
         Schema::create('bodegas', function (Blueprint $table) {
             $table->id();
+            $table->integer('cantidad'); 
+            $table->foreignId('producto_id');
+            $table->foreignId('empresa_id');
+            $table->foreign('producto_id')->references('id')->on('productos')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('empresa_id')->references('id')->on('empresas');
             $table->timestamps();
         });
     }

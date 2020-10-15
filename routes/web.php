@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use  Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +27,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 //Route authentication
 Route::middleware(['auth'])->group(function (){
+
 
 //Usuarios
 
@@ -274,9 +276,4 @@ Route::delete('empresa/{empresa}', 'EmpresaContoller@destroy')->name('empresa.de
 Route::get('empresa/{empresa}/edit', 'EmpresaContoller@edit')->name('empresa.edit')
 ->middleware('permission:empresa.edit');
 
-
-
-  
 });
-
-

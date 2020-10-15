@@ -227,6 +227,7 @@ class PermisionsTableSeeder extends Seeder
        ]);
 
          //Rol Empresa
+
          Permission::create([
             'name'        => 'navegar empresa',
             'slug'        => 'empresa.index',
