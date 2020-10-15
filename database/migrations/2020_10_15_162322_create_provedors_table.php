@@ -15,7 +15,12 @@ class CreateProvedorsTable extends Migration
     {
         Schema::create('provedors', function (Blueprint $table) {
             $table->id();
+            $table->string('nombre');
+            $table->string('direccion');
+            $table->string('correo');   
+            $table->foreignId('empresa_id');
             $table->timestamps();
+            $table->foreign('empresa_id')->references('id')->on('empresas');
         });
     }
 
